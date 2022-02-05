@@ -8,12 +8,8 @@ namespace Cartesian.EditMode.Plugin
 {
     public interface IChart
     {
-        /// <summary>
-        /// 判断是否更新谱面
-        /// </summary>
-        /// <param name="version"></param>
-        /// <returns>upgraded</returns>
-        bool OnChartLoad(int version);
+        int Version { get; }
+        void OnChartLoad(ICtsEvent property);
         void OnNoteLoad(ICollection<ICtsEvent> events);
         void OnTimingLoad(ICollection<ICtsEvent> events);
 

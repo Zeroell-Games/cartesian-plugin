@@ -9,6 +9,6 @@ namespace Cartesian.EditMode.Plugin
     public interface ICtsEvent
     {
         bool GetProperty<T>(string key, out T value);
-        bool SetProperty<T>(string key, T value);
+        void SetProperty(string key, object value);
     }
 }
